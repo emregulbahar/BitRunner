@@ -16,7 +16,7 @@ Ana hedef: anahtarları topla ve kapıları açarak bölümleri geç!
 4. `F5` tuşuna basarak oyunu çalıştır.
 
 ## Ekran Görüntüleri
-![Gameplay Screenshot](BitRunner.png)
+![Gameplay Screenshot](bit-runner/BitRunner.png)
 
 ## Gelecek Planlar
 - Daha fazla bölüm ekleme
