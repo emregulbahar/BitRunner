@@ -1,6 +1,6 @@
-# My Godot Game 🎮
+# Bit Runner🎮
 
-Basit bir 2D platform oyunu. Godot 4.5 kullanılarak geliştirildi.  
+Basit bir 2D platform oyunum. Godot 4.5 kullanılarak geliştirilmitir.  
 Ana hedef: anahtarları topla ve kapıları açarak bölümleri geç!
 
 ## Özellikler
