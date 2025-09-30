@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://d17c8n4k3sbr"]
+
+[ext_resource type="Texture2D" uid="uid://ddtkq35sa7mil" path="res://Assets/1. NEW CLOUDS/1.png" id="1_nvlbp"]
+
+[node name="GameOver" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(580.00006, 323.00003)
+scale = Vector2(18.930946, 6.715787)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 112.99999
+offset_top = 94.0
+offset_right = 159.0
+offset_bottom = 169.0
+scale = Vector2(18.930946, 6.715787)
+text = "Game
+ Over
+"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2(1, 1)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(-1063, -523)
+scale = Vector2(2.9241877, 4.033951)
+texture = ExtResource("1_nvlbp")
+centered = false
+region_enabled = true
+region_rect = Rect2(-255, 0, 831, 324)

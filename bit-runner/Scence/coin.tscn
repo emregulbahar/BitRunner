@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://cvuw4q2dlb6bv"]
+
+[ext_resource type="Script" uid="uid://bavb3huxqresa" path="res://Scripts/coin.gd" id="1_0a6ya"]
+[ext_resource type="Texture2D" uid="uid://f5sknrfbrkyb" path="res://Assets/Transparent/Tilemap/tilemap_packed.png" id="1_hw3hp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0a6ya"]
+atlas = ExtResource("1_hw3hp")
+region = Rect2(104, 40, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_23wda"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0a6ya")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_23wda"]
+size = Vector2(4, 4)
+
+[node name="Coin" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_0a6ya")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_23wda")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_23wda")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

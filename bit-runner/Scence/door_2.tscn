@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://cb4y33ttx311k"]
+
+[ext_resource type="Script" uid="uid://cy4tta8qjv61o" path="res://Scripts/door_2.gd" id="1_yi2wl"]
+[ext_resource type="PackedScene" uid="uid://d17c8n4k3sbr" path="res://Scence/game_over.tscn" id="2_2v07f"]
+[ext_resource type="Texture2D" uid="uid://f5sknrfbrkyb" path="res://Assets/Transparent/Tilemap/tilemap_packed.png" id="2_kjl22"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2v07f"]
+atlas = ExtResource("2_kjl22")
+region = Rect2(88, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibmna"]
+atlas = ExtResource("2_kjl22")
+region = Rect2(104, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cbaix"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2v07f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibmna")
+}],
+"loop": false,
+"name": &"Open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqxwq"]
+size = Vector2(16, 16)
+
+[node name="Door2" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_yi2wl")
+next_scene = ExtResource("2_2v07f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cbaix")
+animation = &"Open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hqxwq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
