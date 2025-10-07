@@ -370,7 +370,10 @@ position = Vector2(135, 155)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 scale = Vector2(-8.479886, 8.235201)
 zoom = Vector2(4, 4)
-limit_bottom = 275
+limit_left = 0
+limit_top = 0
+limit_right = 424
+limit_bottom = 272
 limit_smoothed = true
 
 [node name="Killzone" parent="." instance=ExtResource("5_wl27e")]

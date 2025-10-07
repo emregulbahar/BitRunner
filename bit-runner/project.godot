@@ -15,6 +15,12 @@ run/main_scene="uid://cnfdju3m23d74"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/mode=2
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [global_group]
 
 player=""
